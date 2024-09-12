@@ -1,4 +1,5 @@
 import TaskCard from "../TaskCard/TaskCard";
+import PropTypes from 'prop-types';
 
 const TaskList = ({tasks, deleteTask, completeTask}) => {
 
@@ -16,5 +17,11 @@ const TaskList = ({tasks, deleteTask, completeTask}) => {
         </div>
     );
 };
+
+TaskList.propTypes = {
+    tasks: PropTypes.object.isRequired,
+    deleteTask: PropTypes.func.isRequired,
+    completeTask: PropTypes.func.isRequired
+}
 
 export default TaskList;

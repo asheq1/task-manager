@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PropTypes from 'prop-types';
 
 const TaskCard = ({task, deleteTask, completeTask}) => {
 
@@ -40,5 +41,11 @@ const TaskCard = ({task, deleteTask, completeTask}) => {
         </div>
     );
 };
+
+TaskCard.propTypes = {
+    task: PropTypes.object.isRequired,
+    deleteTask: PropTypes.func.isRequired,
+    completeTask: PropTypes.func.isRequired
+}
 
 export default TaskCard;

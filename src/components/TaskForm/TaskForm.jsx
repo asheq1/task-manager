@@ -2,6 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { CategoryContext } from "../../utilities/CategoryContext";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PropTypes from 'prop-types';
 
 
 const TaskForm = ({addTask}) => {
@@ -44,7 +45,8 @@ const TaskForm = ({addTask}) => {
                     ref={taskNameRef}
                     type="text"
                     value={taskName}
-                    onChange={(e) => setTaskname(e.target.value)} />
+                    onChange={(e) => setTaskname(e.target.value)}
+                    required />
             </div>
             <div className="mb-4">
                 <label className="block text-gray-700 mb-2 text-left">Description</label>
@@ -81,5 +83,9 @@ const TaskForm = ({addTask}) => {
         </form>
     );
 };
+
+TaskForm.propTypes = {
+    addTask: PropTypes.object.isRequired
+}
 
 export default TaskForm;
