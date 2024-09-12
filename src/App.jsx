@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { CategoryProvider } from './utilities/CategoryContext'
 import TaskForm from './components/TaskForm/TaskForm';

@@ -1,7 +1,7 @@
 import TaskCard from "../TaskCard/TaskCard";
 
-
 const TaskList = ({tasks, deleteTask, completeTask}) => {
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {tasks.length > 0 ? (
